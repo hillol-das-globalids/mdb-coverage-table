@@ -190,7 +190,9 @@ Custom property | Description | Default
       }
     </style>
     <div class="title-row">
+            <template is="dom-if" if="[[titleText]]">
       <mdb-title help-text="{{helpText}}" level="2">{{titleText}}</mdb-title>
+            </template>
       <template is="dom-if" if="[[showScrambledDataIcons]]">
         <div class="title-row-icons">
           <div class="indicator-icon"></div>
