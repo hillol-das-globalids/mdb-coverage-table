@@ -407,7 +407,8 @@ Custom property | Description | Default
 
       _columnHidden: function (col) {
         if (col) {
-          return this.columnsShown.toLowerCase() === 'recommended' ? !col.relevance : false;
+                    //return this.columnsShown.toLowerCase() === 'recommended' ? /*false*/!col.relevance : false;
+                    return this.columnsShown.toLowerCase() === 'recommended' ? (col.relevance === undefined ? false : !col.relevance) : false;
         } else {
           return false;
         }
